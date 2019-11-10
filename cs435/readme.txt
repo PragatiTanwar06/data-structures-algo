@@ -1,3 +1,96 @@
+********************** Problem 1 ****************************
+
+For this problem, you will implement a max heap using an array for underlying storage. For example, in C++, the class definition would look like:
+class MaxHeap {
+    vector<int> data;
+};
+You will need to implement the following operations on heaps:
+size which returns the number of items in the heap.
+max lookup which returns the max element in the heap.
+extract max which removes the max element from the heap.
+insert which takes an integer and adds it to the max heap.
+delete which takes an index and removes the item at that index from the heap.
+For example, in C++, the function headers would be the following:
+class MaxHeap {
+    vector<int> data;
+  public:
+    MaxHeap() {
+// ...
+}
+int size() {
+// ...
+    }
+    int maxLookup() {
+// ...
+    }
+    void extractMax() {
+// ...
+    }
+    void insert(int data) {
+// ...
+    }
+    void remove(int index) {
+// ...
+} };
+
+Input
+• The first line contains an integer n, 0 ≤ n ≤ 100, denoting the number of commands following it.
+• The next n lines will consist of one of 5 commands (”size”, ”maxLookup”, ”extract- Max”, ”insert”, and ”delete”).
+• The commands ”insert” and ”delete” will be followed by a space and an integer to perform the command on.
+• At the end of the input there will be a blank line.
+Your program should initialize an empty max heap and perform the commands given by the input, in sequence, on it. See sample input and output below for a concrete example.
+(Note that the argument to ”delete” represents the index of the element in the underlying array, not the element itself.)
+Constraints
+You can assume there will be no invalid input including never calling maxLookup on an empty heap or calling delete on out-of-bounds index. You can assume the max heap will consist only of positive integers with no duplicates.
+Output
+• For the ”maxLookup” command, print the max.
+• For the ”size” command, print the number of elements in the heap.
+• For the ”insert”, ”delete”, and ”extractMax” commands, print nothing.
+See the sample output section for a concrete example.
+
+Sample Input 1
+25
+size
+insert 5
+maxLookup
+insert 18
+maxLookup
+insert 3
+maxLookup
+insert 12
+insert 19
+maxLookup
+extractMax
+maxLookup
+insert 25
+insert 6
+insert 1
+size
+extractMax
+extractMax
+extractMax
+size
+delete 1
+delete 1
+delete 0
+size
+maxLookup
+
+Sample Output 1
+
+0
+5
+18
+18
+19
+18
+7
+4
+1
+1
+
+********************** Problem 2 ****************************
+
 For this problem, we will implement a Complete tree using nodes. For example, in C++, the node and class definitions would look like this:
 struct Node {
     int data;
